@@ -51,4 +51,8 @@ function renderProduct(){
         li.appendChild(btn);
         list.appendChild(li);
     })
+
+    const urunler = product.map(item => item.urun);
+    const toplam = urunler.reduce((acc, val) => acc + val, 0);
+    document.getElementById("balance").textContent = toplam + " ₺";
 }
