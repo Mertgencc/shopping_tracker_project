@@ -8,3 +8,8 @@ window.onload = function(){
 
     renderProduct();
 }
+
+function generateID(){
+    return Date.now();
+}
+
