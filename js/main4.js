@@ -31,3 +31,24 @@ function addProduct(){
     input.value = "";
 }
 
+function renderProduct(){
+    const list = document.getElementById("productList");
+    list.innerHTML = "";
+
+    product.forEach(function(item){
+        const li = document.createElement("li");
+        li.textContent = item.urun;
+
+        const btn = document.createElement("button");
+        btn.textContent = "SİL";
+
+        btn.onclick = function(){
+            product = product.filter((p) => p.id != item.id);
+            localStorage.setItem("product", JSON.stringify(product));
+            renderProduct();
+        }
+
+        li.appendChild(btn);
+        list.appendChild(li);
+    })
+}
