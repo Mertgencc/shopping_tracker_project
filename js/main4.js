@@ -13,3 +13,21 @@ function generateID(){
     return Date.now();
 }
 
+function addProduct(){
+    const input = document.getElementById("textInput");
+    const value = input.value;
+
+    const urun = Number(value);
+    const newItem = {
+        id: generateID(),
+        urun: urun,
+    };
+
+    product.push(newItem);
+    localStorage.setItem("product", JSON.stringify(product));
+
+    renderProduct();
+
+    input.value = "";
+}
+
