@@ -7,11 +7,22 @@
     <title>Shopping Tracker</title>
 </head>
 <body>
-    <input type="text" id="textInput" placeholder="Ürün Ekle ...">
+    <input type="text" id="nameInput" placeholder="Ürün Adı ...">
+    <input type="text" id="priceInput" placeholder="Ürün Fiyatı ...">
+
+    <select id="category">
+        <option value="Market">Market</option>
+        <option value="Teknoloji">Teknoloji</option>
+        <option value="Diğer">Diğer</option>
+    </select>
+
+
     <button onclick="addProduct()">EKLE</button>
 
     <ul id="productList"></ul>
 
+    <p id="balance"></p>
+
     <script src="/js/main4.js"></script>
 </body>
-</html>
+</html> 
